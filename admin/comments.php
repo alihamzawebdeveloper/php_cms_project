@@ -1,0 +1,34 @@
+<?php include "includes/header.php";?>
+    <div id="wrapper">
+
+<?php include "includes/navigation.php";?>
+		
+
+        <div id="page-wrapper">
+		<?php delete_categories();?>
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Comments Area
+                            <small>Author</small>
+                        </h1>
+						<div class="col-xs-12">
+            
+     
+				<?php 
+			if(isset($_GET['source'])){
+				$source = $_GET['source'];
+				
+			}else{
+				$source = '';
+			}
+			switch($source){
+			 default:
+             include "includes/view_all_comments.php";
+             break;
+			}
+		  ?>
